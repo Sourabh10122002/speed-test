@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>speed test</title>
+</head>
+
+<body>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <div id="app">
+    <div id="canvas-container">
+      <div class="speed-display-overlay">
+        <div class="speed-value-large" id="main-speed-value">0</div>
+        <div class="speed-unit-large">Mbps</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <header>
+        <h1>SPEEDTEST</h1>
+      </header>
+
+      <main>
+        <div class="spacer"></div> <!-- Spacer for the ring -->
+        <div class="status-text">Ready</div>
+
+        <div class="controls">
+          <button id="start-btn" class="glow-on-hover">GO</button>
+        </div>
+
+        <div class="graph-container">
+          <canvas id="speed-graph"></canvas>
+        </div>
+
+        <div class="results-grid">
+          <div class="result-card">
+            <span class="label">PING</span>
+            <span class="value" id="ping-value">--</span>
+            <span class="unit">ms</span>
+          </div>
+          <div class="result-card">
+            <span class="label">DOWNLOAD</span>
+            <span class="value" id="download-value">--</span>
+            <span class="unit">Mbps</span>
+          </div>
+          <div class="result-card">
+            <span class="label">UPLOAD</span>
+            <span class="value" id="upload-value">--</span>
+            <span class="unit">Mbps</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
